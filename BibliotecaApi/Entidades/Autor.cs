@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using BibliotecaApi.Validaciones;
+using System.ComponentModel.DataAnnotations;
 
 namespace BibliotecaApi.Entidades
 {
@@ -7,6 +8,7 @@ namespace BibliotecaApi.Entidades
         public int Id { get; set; }
         [Required(ErrorMessage = "Por favor, escriba el '{0}' del autor.")]
         [StringLength(50, ErrorMessage ="El '{0}' debe tener {1} caracteres o menos.")]
+        [PrimeraLetraMayuscula]
         public required string Nombre { get; set; }
         public List<Libro> Libros { get; set; } = new List<Libro>();// Relación con los libros - uno a muchos
 
