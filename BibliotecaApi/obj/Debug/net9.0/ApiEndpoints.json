@@ -269,6 +269,62 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "BibliotecaApi.Controllers.ValoresController",
+    "Method": "GetServiciostiempoDeVida",
+    "RelativePath": "api/valores",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.ValoresController",
+    "Method": "Get",
+    "RelativePath": "api/valores",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BibliotecaApi.Entidades.Valor, BibliotecaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.ValoresController",
+    "Method": "Post",
+    "RelativePath": "api/valores",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "valor",
+        "Type": "BibliotecaApi.Entidades.Valor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BibliotecaApi.Controllers.ValoresController",
+    "Method": "GetServiciostiempoDeVida",
+    "RelativePath": "api/valores/servicios-tiempo-de-vida",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "BibliotecaApi.Controllers.AutoresController",
     "Method": "Get",
     "RelativePath": "listado-de-autores",

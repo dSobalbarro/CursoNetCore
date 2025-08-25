@@ -43,7 +43,9 @@ namespace BibliotecaApi.Controllers
             var existeAutor = await context.Autores.AnyAsync(x => x.Id == libro.AutorId);
             if (!existeAutor)
             {
-                return BadRequest($"No existe el autor con Id {libro.AutorId}"); // Devuelve un error 400 si no existe el autor
+                ModelState.AddModelError(nameof(Libro.AutorId), $"No existe el autor con Id {libro.AutorId}");
+                return ValidationProblem();
+                //return BadRequest($"No existe el autor con Id {libro.AutorId}"); // Devuelve un error 400 si no existe el autor
             }
 
             // Aquí podrías agregar lógica para guardar el libro en la base de datos
