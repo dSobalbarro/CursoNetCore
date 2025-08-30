@@ -12,10 +12,12 @@ namespace BibliotecaApi.Controllers
     public class AutoresController : ControllerBase
     {
         private readonly ApplicationDBContext context;
+        private readonly ILogger<AutoresController> logger;
 
-        public AutoresController(ApplicationDBContext context)
+        public AutoresController(ApplicationDBContext context, ILogger<AutoresController> logger)
         {
             this.context = context;
+            this.logger = logger;
         }
 
 
@@ -23,7 +25,13 @@ namespace BibliotecaApi.Controllers
         [HttpGet("/listado-de-autores")]
         public async Task< IEnumerable<Autor> > Get()
         {
-             return await context.Autores.ToListAsync(); // Obtiene todos los autores de la base de datos de manera asíncrona
+            logger.LogTrace("Obteniendo el listado de autores.");
+            logger.LogInformation("Obteniendo el listado de autores.");
+            logger.LogDebug("Obteniendo el listado de autores.");
+            logger.LogWarning("Obteniendo el listado de autores.");
+            logger.LogError("Obteniendo el listado de autores.");
+            logger.LogCritical("Obteniendo el listado de autores.");
+            return await context.Autores.ToListAsync(); // Obtiene todos los autores de la base de datos de manera asíncrona
           
         }
         //aca el string no es válido/ alpha acepta solo letras en la ruta
